@@ -3,7 +3,7 @@ backend:
   repo: Prem-gupta789/Mind-your-wealth
   branch: main
   base_url: https://api.decapcms.org
-  auth_endpoint: auth
+  auth_endpoint: /auth
 
 media_folder: "images"
 public_folder: "/images"
