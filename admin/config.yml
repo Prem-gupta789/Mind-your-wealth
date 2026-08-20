@@ -2,19 +2,21 @@ backend:
   name: github
   repo: Prem-gupta789/Mind-your-wealth
   branch: main
+  base_url: https://api.decapcms.org
+  auth_endpoint: auth
 
 media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: products
-    label: Products
-    folder: products
+  - name: "products"
+    label: "Products"
+    folder: "products"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: Product Name, name: title, widget: string}
-      - {label: Price, name: price, widget: string}
-      - {label: Buy Link, name: link, widget: string}
-      - {label: Image, name: image, widget: image}
-      - {label: Description, name: description, widget: text}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Buy Link", name: "buy_link", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
