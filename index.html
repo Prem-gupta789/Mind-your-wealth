@@ -1,73 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mind Your Wealth</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#0b0b0b;color:#fff}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;position:sticky;top:0;background:#111}
-.logo{font-size:28px;font-weight:700;color:#FFD700}
-nav a{color:#fff;text-decoration:none;margin-left:25px}
-.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
-.hero h1{font-size:60px}
-.hero h1 span{color:#FFD700}
-.hero p{margin:20px 0;color:#bbb;max-width:650px}
-.btn{background:#FFD700;color:#111;padding:15px 35px;border-radius:50px;text-decoration:none;font-weight:700}
-.products{padding:80px 8%}
-.products h2{text-align:center;font-size:40px;color:#FFD700;margin-bottom:40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-.card{background:#161616;padding:20px;border-radius:20px;transition:.3s}
-.card:hover{transform:translateY(-8px)}
-.card img{width:100%;border-radius:15px}
-.price{color:#FFD700;font-size:22px;font-weight:700;margin-top:10px}
-footer{text-align:center;padding:30px;color:#888}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Your Wealth</title>
+
+  <!-- Netlify Identity Widget (Invite link aur Password setup ke liye) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
-<nav>
-<div class="logo">MYW</div>
-<div>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</div>
-</nav>
+  <!-- Landing Redirect Script -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 
-<section class="hero">
-<h1>Mind Your <span>Wealth</span></h1>
-<p>Invest in Your Body. Premium protein, creatine and wellness products for serious athletes.</p>
-<a class="btn" href="#shop">Shop Now</a>
-</section>
-
-<section class="products" id="shop">
-<h2>Best Sellers</h2>
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600" alt="">
-<h3>Whey Protein</h3>
-<div class="price">₹2,499</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600" alt="">
-<h3>Creatine</h3>
-<div class="price">₹899</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600" alt="">
-<h3>Pre Workout</h3>
-<div class="price">₹1,299</div>
-</div>
-</div>
-</section>
-
-<footer>© 2026 Mind Your Wealth</footer>
+  <h1>Welcome to Mind Your Wealth</h1>
+  <p>Website is live and working!</p>
 
 </body>
 </html>
